@@ -2,27 +2,28 @@
 	display: grid;
 	grid-template-columns: $layoutPadding 1fr $layoutPadding;
 
-	// @include for-narrow-layout {
-	//     @include layoutGTC($break-narrow);
-	// }
+	
 
-	@media (max-width:576px) {
-		@include layoutGTC($small);
+	@media (max-width: 576px) {
+		@include layoutGTC($small,$layoutMobilePadding);
+	}
+	@include for-sm-layout {
+		@include layoutGTC($small,$layoutMobilePadding);
 	}
 
 	@include for-md-layout {
-		@include layoutGTC($medium);
+		@include layoutGTC($medium,$layoutMobilePadding);
 	}
 
 	@include for-lg-layout {
-		@include layoutGTC($large);
+		@include layoutGTC($large,$layoutMobilePadding);
 	}
 
 	@include for-xl-layout {
-		@include layoutGTC($x-large);
+		@include layoutGTC($x-large,$layoutSmallPadding);
 	}
 	@include for-xl-layout {
-		@include layoutGTC($home-page-large);
+		@include layoutGTC($home-page-large,$layoutPadding);
 	}
 
 	// @include for-home-layout {
@@ -61,21 +62,21 @@
 	//     @include layoutGTC($break-narrow);
 	// }
 
-	@media (max-width:576px) {
-		@include layoutGTC($small);
-	}
+	// @media (max-width:576px) {
+	// 	@include layoutGTC($small);
+	// }
 
-	@include for-md-layout {
-		@include layoutGTC($medium);
-	}
+	// @include for-md-layout {
+	// 	@include layoutGTC($medium);
+	// }
 
-	@include for-lg-layout {
-		@include layoutGTC($large);
-	}
+	// @include for-lg-layout {
+	// 	@include layoutGTC($large);
+	// }
 	
-	@include for-xl-layout {
-		@include layoutGTC($x-large);
-	}
+	// @include for-xl-layout {
+	// 	@include layoutGTC($x-large);
+	// }
 
 	
 

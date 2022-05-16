@@ -29,12 +29,18 @@
 	}
 }
 
-@mixin layoutGTC($max) {
+@mixin layoutGTC($max,$layoutPadding) {
 	grid-template-columns:
 		minmax($layoutPadding, 1fr)
 		minmax(auto, $max)
 		minmax($layoutPadding, 1fr);
 }
+// @mixin layoutMobileGTC($small) {
+// 	grid-template-columns:
+// 		minmax(20px, 1fr)
+// 		minmax(auto, $small)
+// 		minmax(20px, 1fr);
+// }
 
 /* Media  Mixins */
 
@@ -135,18 +141,18 @@
 	}
 }
 
-@mixin layoutGTC($max) {
-	grid-template-columns: minmax($layoutPadding, 1fr) minmax(auto, $max) minmax(
-			$layoutPadding,
-			1fr
-		);
-}
-@mixin layoutSmallGTC($max) {
-	grid-template-columns: minmax($layoutSmallPadding, 1fr) minmax(auto, $max) minmax(
-			$layoutSmallPadding,
-			1fr
-		);
-}
+// @mixin layoutGTC($max) {
+// 	grid-template-columns: minmax($layoutPadding, 1fr) minmax(auto, $max) minmax(
+// 			$layoutPadding,
+// 			1fr
+// 		);
+// }
+// @mixin layoutSmallGTC($max) {
+// 	grid-template-columns: minmax($layoutSmallPadding, 1fr) minmax(auto, $max) minmax(
+// 			$layoutSmallPadding,
+// 			1fr
+// 		);
+// }
 
 @mixin for-normal-layout {
 	@media (min-width: $break-normal) {
