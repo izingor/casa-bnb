@@ -104,7 +104,7 @@
 	position: relative;
 	// z-index: 1000000 !important;
 
-	.badge-image {
+	.badge-image,.host-img {
 		border-radius: 50%;
 		display: block;
 		height: 30px;
@@ -115,6 +115,7 @@
 		font-weight: 600;
 		margin-left: 12px;
 	}
+
 }
 
 .visible {

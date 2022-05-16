@@ -9,32 +9,27 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref } from "vue";
 export default {
-  name: 'stay-filter-price',
+  name: "stay-filter-price",
   props: {
     stays: Array,
   },
   data() {
     return {
-      prices: this.stays.map(stay => stay.price),
-      value : ref([0, 200]),
-    }
+      prices: this.stays.map((stay) => stay.price),
+      value: ref([0, 200]),
+    };
   },
-  created() {
-
-  },
-  watch: {
-    },
+  created() {},
+  watch: {},
   computed: {
-    maxPrice(){
-     return Math.max(...this.prices) 
-    }
+    maxPrice() {
+      return Math.max(...this.prices);
+    },
   },
-  methods: {
-
-  },
-}
+  methods: {},
+};
 </script>
 <style scoped>
 .slider-demo-block {

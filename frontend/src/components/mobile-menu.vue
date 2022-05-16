@@ -42,35 +42,35 @@
 </template>
 <script>
 export default {
-	props: {
-		notification: {
-			type: String,
-		},
-		user: {
-			type: Object,
-		},
-	},
-	data() {
-		return {};
-	},
+  props: {
+    notification: {
+      type: String,
+    },
+    user: {
+      type: Object,
+    },
+  },
+  data() {
+    return {};
+  },
 
-	methods: {
-		moveToListings() {
-			this.$emit('readNotification');
-			this.$router.push({ path: '/user' });
-			this.closeMenu();
-		},
-		closeMenu() {
-			console.log('closing');
-			this.$emit('closeMenu');
-		},
-	},
-	computed: {
-		orderStatus() {
-			if (this.notification) return true;
-			else return false;
-		},
-	},
+  methods: {
+    moveToListings() {
+      this.$emit("readNotification");
+      this.$router.push({ path: "/user" });
+      this.closeMenu();
+    },
+    closeMenu() {
+      console.log("closing");
+      this.$emit("closeMenu");
+    },
+  },
+  computed: {
+    orderStatus() {
+      if (this.notification) return true;
+      else return false;
+    },
+  },
 };
 </script>
 

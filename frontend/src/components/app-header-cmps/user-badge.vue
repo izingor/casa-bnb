@@ -12,7 +12,6 @@
 					aria-hidden="true"
 					role="presentation"
 					focusable="false"
-					style="display: block; height: 80%; width: 80%; fill: currentcolor"
 				>
 					<path
 						d="m16 .7c-8.437 0-15.3 6.863-15.3 15.3s6.863 15.3 15.3 15.3 15.3-6.863 15.3-15.3-6.863-15.3-15.3-15.3zm0 28c-4.021 0-7.605-1.884-9.933-4.81a12.425 12.425 0 0 1 6.451-4.4 6.507 6.507 0 0 1 -3.018-5.49c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5a6.513 6.513 0 0 1 -3.019 5.491 12.42 12.42 0 0 1 6.452 4.4c-2.328 2.925-5.912 4.809-9.933 4.809z"
@@ -84,7 +83,6 @@ export default {
 			await this.$store.dispatch({ type: 'logout' });
 		},
 		closeMenu() {
-			console.log('closing');
 			this.isMenuOpen = false;
 		},
 		openLogin() {
@@ -99,18 +97,15 @@ export default {
 			this.isSignupModal = false;
 		},
 		closeLogin() {
-			console.log('closing');
 			this.isLoginModal = false;
 		},
 		setSocket() {
 			this.loggedUser = this.getUser;
 			if (!this.loggedUser) return;
-			console.log(this.getUser);
 			socketService.emit('topic', this.loggedUser._id);
 			socketService.on('add order', this.createNotification);
 		},
 		createNotification() {
-			console.log('creating notification', this.user);
 			this.notification = '!';
 		},
 		readNotification() {
@@ -132,7 +127,6 @@ export default {
 			}
 		},
 		chatNotification() {
-			console.log('watch all chats!!!!');
 			this.allChats.forEach((chat) => {
 				var users = [chat.user1, chat.user2];
 				const curUser = users.filter((user) => user._id === this.user._id)[0];
@@ -146,7 +140,6 @@ export default {
 			});
 		},
 		addMsg(data) {
-			console.log('socketttttttt barrrrrrrr', data);
 			this.$store.commit({ type: 'saveMsg', msg: data.msg, topic: data.topic });
 			this.chatNotification();
 		},
