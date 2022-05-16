@@ -45,6 +45,7 @@
 				></path>
 			</svg>
 		</div>
+	<!-- <pre>{{stay.imgUrls}}</pre> -->
 	</section>
 </template>
 
