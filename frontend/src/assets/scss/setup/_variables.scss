@@ -1,0 +1,43 @@
+// colors
+$white: #ffffff;
+$theme-red: #ff385c;
+$theme-hover: #D70466;
+
+$red-100: #fee2e2;
+$red-200: #fecaca;
+$red-300: #fca5a5;
+$red-400: #f87171;
+$red-500: #ef4444;
+$red-600: #dc2626;
+$red-700: #b91c1c;
+$red-800: #991b1b;
+
+$gray-1: #717171;
+$gray-2: #484848;
+$gray-3: #222222;
+$gray-4: rgb(221, 221, 221);
+$gray-5: #ababab;
+
+
+// animation
+$transition: 0.2s ease-in-out;
+
+// break points
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1120px;
+$home-page-large: 1440px;
+
+$layoutPadding: 80px;
+$layoutSmallPadding: 40px;
+
+
+// LAYOUT BREAKPOINTS
+$break-narrow: 1200px;
+$break-normal: 1360px;
+$break-wide: 1920px;
+
+$padded-break-narrow: $break-narrow + $layoutPadding * 2;
+$padded-break-normal: $break-normal + $layoutPadding * 2;
+$padded-break-wide: $break-wide + $layoutPadding * 2;

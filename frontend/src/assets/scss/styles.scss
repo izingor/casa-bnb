@@ -1,0 +1,48 @@
+// SETUP
+@import 'setup/typography';
+@import 'setup/mixins';
+@import 'setup/functions';
+@import 'setup/variables';
+@import 'material-icons/iconfont/material-icons.scss';
+
+// BASE
+@import 'base/base';
+@import 'base/helpers';
+@import 'base/util';
+@import 'base/layout';
+
+// VIEWS
+@import 'views/home';
+@import 'views/app';
+@import 'views/login';
+@import 'views/stay-details';
+@import 'views/add-stay';
+@import 'views/reservations-list.scss';
+
+// COMPONENTS
+@import 'components/app-header-cmps/app-header';
+@import 'components/app-footer';
+@import 'components/stay-filter';
+@import 'components/stay-list';
+@import 'components/stay-preview';
+@import 'components/app-header-cmps/signup-signup-modal';
+@import 'components/app-header-cmps/user-menu';
+@import 'components/app-header-cmps/mobile-search-bar.scss';
+@import 'components/mobile-footer.scss';
+@import 'components/mobile-search-menu.scss';
+@import 'components/price-filter.scss';
+@import 'components/chat.scss';
+@import 'components/reservation-confirm-modal.scss';
+@import 'components/mobile-menu.scss';
+
+// @import 'components/stay-details';
+@import 'components/details-view-cmps/details-header-cmp';
+@import 'components/details-view-cmps/details-gallery-cmp';
+@import 'components/details-view-cmps/details-host-main-cmp';
+@import 'components/details-view-cmps/details-checkout-cmp';
+@import 'components/details-view-cmps/details-reviews-cmp';
+@import 'components/details-view-cmps/details-map-cmp';
+@import 'components/search-bar';
+@import 'components/small-search-bar';
+@import 'components/add-guests-modal';
+@import 'components/date-picker.scss';

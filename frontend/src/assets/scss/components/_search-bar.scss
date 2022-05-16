@@ -1,0 +1,236 @@
+.filter {
+	height: 67px;
+	width: 100%;
+	background-color: $white;
+	border-radius: 32px;
+	display: flex;
+	justify-content: space-between;
+	// position: absolute;
+	left: 100px;
+	font-family: 'Circular-Light';
+	font-size: 14px;
+	border: 1px solid rgba(0, 0, 0, 0.158);
+	margin-top: 10px;
+	margin-bottom: 26px;
+
+}
+
+.filter-container {
+		// margin: auto;
+		max-width: 950px;
+		min-width: 690px;
+	margin: auto;
+	.search-container-outer {
+		width: 30%;
+		padding: 0;
+		margin: 0;
+		// margin-right: 2px;
+		position: relative;
+
+		.border {
+			position: absolute;
+			top: 20%;
+			bottom: 20%;
+			right: 0;
+			border-right: 0.5px solid rgb(238, 237, 237);
+		}
+
+		.search-container {
+			position: relative;
+			// width: 80%;
+			height: 64px;
+			background-color: $white;
+			border-radius: 32px 32px 32px 32px;
+			background-color: $white;
+
+			&:hover {
+				background-color: darken($white, 4%);
+				cursor: pointer;
+			}
+
+			&:hover .search-input {
+				background-color: darken($white, 4%);
+			}
+
+			span {
+				position: absolute;
+				left: 32px;
+				top: 12px;
+				font-weight: 700;
+				color: black;
+				font-size: 13px;
+
+			}
+
+			.search-input {
+				width: 65%;
+				height: 28px;
+				position: absolute;
+				left: 30px;
+				bottom: 8px;
+				border: none;
+				outline: none;
+				color: rgb(133, 133, 133);
+			}
+		}
+	}
+}
+
+.search-guests {
+	display: flex;
+	align-items: center;
+	width: 22%;
+	height: 64px;
+	background-color: $white;
+	border-radius: 32px 32px 32px 32px;
+
+	&:hover {
+		background-color: darken($white, 5%);
+		cursor: pointer;
+	}
+
+	&:hover .guests-container {
+		background-color: darken($white, 5%);
+	}
+
+	.guests-container {
+		position: relative;
+		background-color: $white;
+		width: 70%;
+		height: 64px;
+		border-radius: 32px 0 0 32px;
+
+		&:hover .guests-container {
+			background-color: darken($white, 5%);
+			cursor: pointer;
+		}
+
+		span {
+			position: absolute;
+			left: 32px;
+			top: 12px;
+			font-weight: 700;
+			color: black;
+			font-size: 13px;
+		}
+
+		p {
+			position: absolute;
+			left: 32px;
+			bottom: 8px;
+		}
+	}
+}
+
+
+
+.search-btn-container {
+	align-self: center;
+	border-radius: 50px;
+	background-color: $theme-red;
+	width: 49px;
+	height: 48px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-right: 10px;
+	transition: 0.05s;
+	cursor: pointer;
+
+
+	&:hover {
+		background-color: darken($theme-red, 15%);
+		cursor: pointer;
+	}
+
+	p {
+		color: $white;
+		font-family: 'Circular-Bold';
+		font-size: 16px;
+		margin-right: 4px;
+
+	}
+
+	img {
+		height: 30px;
+		width: 30px;
+	}
+}
+
+.date-start {
+	background-color: $white;
+	width: 20%;
+	height: 64px;
+	border-radius: 32px 32px 32px 32px;
+	position: relative;
+
+	.border {
+		position: absolute;
+		top: 20%;
+		bottom: 20%;
+		right: 0;
+		border-right: 0.5px solid rgb(221, 220, 220);
+	}
+
+	span {
+		position: absolute;
+		left: 32px;
+		top: 12px;
+		font-weight: 700;
+		color: black;
+		font-size: 13px;
+	}
+
+	p {
+		position: absolute;
+		left: 32px;
+		bottom: 8px;
+	}
+
+	&:hover {
+		background-color: darken($white, 5%);
+		cursor: pointer;
+	}
+}
+
+.date-end {
+	background-color: $white;
+	width: 20%;
+	height: 64px;
+	border-radius: 32px 32px 32px 32px;
+	position: relative;
+
+	.border {
+		position: absolute;
+		top: 20%;
+		bottom: 20%;
+		right: 0;
+		border-right: 0.5px solid rgb(221, 220, 220);
+	}
+
+	span {
+		position: absolute;
+		left: 32px;
+		top: 12px;
+		font-weight: 700;
+		color: black;
+		font-size: 13px;
+	}
+
+	p {
+		position: absolute;
+		left: 32px;
+		bottom: 8px;
+	}
+
+	&:hover {
+		background-color: darken($white, 5%);
+		cursor: pointer;
+	}
+}
+
+// .date-picker {
+// 	margin-top: 100px;
+// 	position: absolute;
+// 	margin-top: 400px;
+// }

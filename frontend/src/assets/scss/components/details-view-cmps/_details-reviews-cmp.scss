@@ -1,0 +1,109 @@
+.details-reviews-section {
+    box-shadow: inset 0 -0.5px 0 0 rgb(199, 199, 199);
+
+    .rating-reviews-section {
+        padding-bottom: 32px;
+        font-size: 22px;
+        color: $gray-3;
+        line-height: 26px;
+        font-family: "Cereal-Medium";
+        font-weight: 500;
+
+        .rating {
+            .rate-icon {
+                margin-right: 8px;
+            }
+            u {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .review-scores-section {
+        .details-reviews-scores {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px 40px;
+            padding-bottom: 24px;
+        }
+
+        .category-progress.el-progress--line {
+            padding: 0 8px;
+            margin-bottom: 15px;
+
+            // .el-progress {
+            //     width: 30%;
+            // }
+        }
+
+        p {
+            color: #222222;
+        }
+
+        .el-progress-bar__outer {
+            background-color: #dddddd !important;
+        }
+        .el-progress-bar__inner {
+            background-color: #222222 !important;
+        }
+    }
+
+    .reviews-list {
+        color: $gray-3;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px 40px;
+        // justify-content: space-around;
+        // align-self: flex-start;
+        // width: 100%;
+
+        .preview-data {
+            margin-bottom: 40px;
+            // justify-content: stretch;
+            // max-height: 200px;
+            text-overflow: none;
+
+            p {
+                text-overflow: none;
+            }
+            .reviewer-dets {
+                margin-bottom: 12px;
+
+                img {
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .reviewer-name {
+                    margin-left: 12px;
+                    padding: 7px 0;
+
+                    p {
+                        color: $gray-1;
+                    }
+                }
+            }
+
+            p {
+                text-align: justify;
+            }
+        }
+    }
+}
+
+.el-carousel__arrow {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #222222 !important;
+
+    display: block;
+    fill: none;
+    height: 12px;
+    width: 12px;
+    stroke: currentcolor;
+    stroke-width: 4;
+    overflow: visible;
+}

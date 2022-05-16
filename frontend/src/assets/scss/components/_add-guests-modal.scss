@@ -1,0 +1,88 @@
+.guests-input-modal {
+	position: absolute;
+	z-index: 10;
+	padding: 32px 32px 32px 32px;
+	width: 375px;
+	height: 240px;
+	background-color: $white;
+	border-radius: 35px;
+	border: 1px solid rgba(0, 0, 0, 0.158);
+	transform: translate(0%, 0%);
+	top: 72px;
+	left: -25px;
+	&:hover{
+		cursor: default;
+	}
+
+	hr {
+		color: red;
+	}
+
+	.btn-round {
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		font-size: 16px;
+		font-weight: bold;
+		background-color: $white;
+		color: #8f8d8d;
+		border: 0.5px solid #8f8d8d;
+		transition: 0.2s;
+		
+
+		&:hover {
+			cursor: pointer;
+			color: #615f5f;
+			border: 0.5px solid #615f5f;
+		}
+	}
+	div {
+		span{
+			font-size:16px;
+			color: black;
+			font-weight: bold;
+		}
+		p{
+			font-size:14px;
+		}
+	}
+	.guests-details {
+		// padding-top:30px;
+		
+		width: 300px;
+		height: 40px;
+		position:relative;
+		// border-bottom: 1px solid rgb(206, 206, 206);
+		// .guests-bottom-border{
+		// 	position: absolute;
+		// 	// top: 20%;
+		// 	// bottom: 0;
+		// 	right: 0%;
+		// 	left: 100;
+		// 	border-right: 1px solid rgb(10, 10, 10);
+		// }
+	}
+
+	.border-bot{
+		border-bottom: 1px solid rgb(223, 223, 223);
+		padding-bottom: 16px;
+		box-sizing:content-box;
+
+	}
+
+	.margin-top{
+		margin-top: 16px;
+	}
+
+	
+
+	.guests-buttons {
+		width: 104px;
+	}
+}
+
+
+// .stay-search-position{
+// 	top: 100px;
+// 	right: 200px;
+// }

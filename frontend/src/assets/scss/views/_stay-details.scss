@@ -1,0 +1,137 @@
+.stay-details {
+	padding-top: 100px;
+}
+
+.details-grid {
+	width: 100%;
+	height: fit-content;
+	display: grid;
+	margin-bottom: 30px;
+	// display: grid;
+	grid-template-columns: 70% 30%;
+	grid-template-rows: 65% 35%;
+	grid-template-areas:
+		"details checkout"
+		"amenities checkout";
+
+	box-shadow: inset 0 -0.5px 0 0 rgb(199, 199, 199);
+	padding-bottom: 50px;
+}
+
+.checkout-container {
+	position: relative;
+	padding-top: 48px;
+	width: 100%;
+
+	grid-area: checkout;
+}
+
+.details-main-container {
+	width: 100%;
+	grid-area: details;
+}
+
+.main-inner-container {
+	width: 80%;
+}
+.details-carousel-img {
+	width: 100%;
+	border-radius: 12px;
+}
+
+.details-carousel-item {
+	padding-top: 24px;
+
+	border-radius: 12px;
+}
+.el-carousel__container {
+	border-radius: 12px;
+}
+
+.amenities-container {
+	background-color: $white;
+	width: 100%;
+	height: 30%;
+	margin-top: 40px;
+	// grid-area: amenities;
+
+	h2 {
+		font-size: 22px;
+		font-family: "Circular-Light";
+		font-weight: 700;
+		padding-bottom: 24px;
+		color: #222222;
+	}
+
+	.amenities-content {
+		padding-bottom: 16px;
+		background-color: $white;
+		width: 80%;
+		column-count: 2;
+
+		.amenity {
+			-webkit-column-break-inside: avoid;
+			width: 100%;
+			height: 40px;
+
+			.amenity-icon {
+				width: 20px;
+				height: 20px;
+				margin-right: 10px;
+			}
+
+			p {
+				font-size: 16px;
+				color: #222222;
+			}
+		}
+	}
+}
+
+@media (max-width: 780px) {
+	.stay-details-img-container {
+		display: none;
+	}
+	.details-grid {
+		// grid-template-columns: 100% 0%;
+		// grid-template-rows: 65% 35%;
+		display: flex;
+		flex-direction: column;
+	}
+	.checkout-container {
+		display: none;
+	}
+	.main-inner-container {
+		width: 100%;
+	}
+
+	.main-inner-container {
+		width: 100%;
+	}
+}
+@media (min-width: 780px) {
+	// .stay-details-img-container {
+	// 	display: none;
+	// }
+	.details-carousel-item {
+		display: none;
+	}
+	.details-grid {
+		grid-template-columns: 60% 35%;
+		grid-template-rows: 65% 35%;
+	}
+}
+
+@media (min-width: 980px) {
+	.details-grid {
+		grid-template-columns: 60% 35%;
+		grid-template-rows: 65% 35%;
+	}
+}
+
+@media (min-width: 1120px) {
+	.details-grid {
+		grid-template-columns: 65% 35%;
+		grid-template-rows: 65% 35%;
+	}
+}

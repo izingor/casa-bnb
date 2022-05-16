@@ -1,0 +1,179 @@
+.main-header {
+	background-color: rgba(255, 255, 255, 0);
+	width: 100%;
+	position: fixed;
+	transition: 0.3s;
+	z-index: 100;
+}
+.header-content {
+	position: relative;
+}
+.casa-symbol {
+	font-size: 2.7rem;
+}
+.logo {
+	color: $theme-red;
+	width: 120px;
+	height: 70px;
+	
+	a {
+		text-decoration: none;
+		color: $white;
+		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		transition: 0.4s;
+		padding: 0;
+	}
+	.color-theme {
+		color: $theme-red;
+		text-shadow: none;
+	}
+	h2 {
+		cursor: pointer;
+		padding: 0;
+	}
+}
+
+.nav-bar {
+	width: 320px;
+	height: 80px;
+	justify-content: space;
+
+	.explore-link {
+		height: 42px;
+		width: 77px;
+		border-radius: 22px;
+		transition: 0.25s;
+		padding: 0 10px;
+		// margin-left: 25px;
+		cursor: pointer;
+
+		a {
+			text-decoration: none;
+			font-family: roboto, arial, helvetica, sans-serif;
+			// text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+			color: $white;
+			transition: 0.3s;
+		}
+		.color-black {
+			color: black;
+		}
+
+		&:hover {
+			background-color: darken(rgba(255, 255, 255, 0.288), 3.5%);
+		}
+	}
+	.host-link {
+		height: 42px;
+		width: 130px;
+		border-radius: 22px;
+		transition: 0.25s;
+		padding: 0 10px;
+		margin-right: 10px;
+		cursor: pointer;
+		a {
+			text-decoration: none;
+			font-family: roboto, arial, helvetica, sans-serif;
+			// text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+			color: $white;
+			transition: 0.3s;
+		}
+		.color-black {
+			color: black;
+		}
+
+		&:hover {
+			background-color: darken(rgba(255, 255, 255, 0.288), 3.5%);
+		}
+	}
+}
+
+.change {
+	height: 80px;
+	position: fixed;
+}
+//user-badge
+
+.user-badge {
+	width: 77px;
+	height: 42px;
+	background-color: white;
+	border-radius: 21px;
+	align-items: center;
+	border: 1px solid #dddddd;
+	cursor: pointer;
+	position: relative;
+	// z-index: 1000000 !important;
+
+	.badge-image {
+		border-radius: 50%;
+		display: block;
+		height: 30px;
+		width: 30px;
+		margin-right: 7px;
+	}
+	.badge-hamburger {
+		font-weight: 600;
+		margin-left: 12px;
+	}
+}
+
+.visible {
+	background-color: $white;
+}
+.invisible {
+	visibility: hidden;
+}
+
+
+@media (max-width: 780px) {
+	.logo-txt {
+		display: none;
+	}
+	.logo {
+		width: 26px;
+		width: 120px;
+	}
+	.nav-bar{
+		// display: none;
+	}
+	.host-link{
+		display: none;
+	}
+
+	.explore-link{
+		display: none;
+		
+	}
+}
+
+
+@media (min-width: 780px) {
+	.logo-txt {
+		display: none;
+	}
+	.logo {
+		width: 26px;
+		width: 120px;
+	}
+	// .main-header{
+	// 	background-color: $white !important;
+	// visibility: visible !important;
+	// }
+}
+
+@media (min-width: 992px) {
+	.logo {
+		width: 26px;
+		width: 120px;
+		justify-content: flex-start;
+	}
+}
+
+@media (min-width: 1120px) {
+	.logo-txt {
+		display: inline;
+	}
+}
+
+@media (min-width: 1440px) {
+}
