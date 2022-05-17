@@ -1,5 +1,5 @@
 <template>
-  <!-- <div> -->
+  <div>
     <div class="filter-container">
       <form class="flex align just">
         <div class="filter">
@@ -67,7 +67,7 @@
         end-placeholder="End date"
       />
     </div>
-  <!-- </div> -->
+  </div>
 </template>
 
 <script>
@@ -150,6 +150,7 @@ export default {
     },
     showDatePicker() {
       this.$el.querySelector(".el-range-editor").click();
+      console.log('opening date picker');
 
     },
     openSearch() {
