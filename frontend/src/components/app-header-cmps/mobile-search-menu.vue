@@ -36,7 +36,6 @@ export default {
 			this.$emit('onMobileSearchClosed');
 		},
 		setFilter() {
-			// const { destination } = this.filterBy;
 			this.$store.commit({ type: 'setFilter', filterBy: {...this.filterBy} });
 			this.closeMobileMenu();
       this.$router.push(`/stay`)
