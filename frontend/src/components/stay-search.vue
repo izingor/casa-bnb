@@ -7,8 +7,8 @@
 						class="search-container-outer"
 						:style="{ width: isSearchOpen ? '25%' : '30%' }"
 					>
-						<div class="border"></div>
 						<div class="search-container" @click="focusSearch">
+						<div class="border"></div>
 							<span>Location</span>
 							<input
 								class="search-input"

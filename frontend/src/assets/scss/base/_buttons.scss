@@ -13,6 +13,9 @@
 
 }
 .medium-red-btn {
+    display:flex;
+    justify-content: center;
+    align-items: center;
     background: $theme-red;
     padding: 0.8em 1em;
     border: none;

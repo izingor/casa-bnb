@@ -16,10 +16,11 @@
 }
 
 .filter-container {
-		// margin: auto;
-		max-width: 950px;
-		min-width: 690px;
-	margin: auto;
+	// margin: auto;
+	max-width: 950px;
+	min-width: 690px;
+
+	// margin: auto;
 	.search-container-outer {
 		width: 30%;
 		padding: 0;
@@ -35,6 +36,7 @@
 			border-right: 0.5px solid rgb(238, 237, 237);
 		}
 
+
 		.search-container {
 			position: relative;
 			// width: 80%;
@@ -42,6 +44,8 @@
 			background-color: $white;
 			border-radius: 32px 32px 32px 32px;
 			background-color: $white;
+
+		
 
 			&:hover {
 				background-color: darken($white, 4%);
