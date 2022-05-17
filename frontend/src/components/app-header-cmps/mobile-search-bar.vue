@@ -1,5 +1,5 @@
 <template>
-<div class = "main-layout">
+<div class = "main-layout" @click = "onMobileSearchOpened">
 	<section class="mobile-search-bar-container main-layout">
 		<div class="search-bar flex align just">
 			<img src="../../assets/Images/logos/search-icon-red.svg" alt="" />
@@ -15,7 +15,12 @@ export default {
 	data() {
 		return {};
 	},
-	methods: {},
+	methods: {
+		onMobileSearchOpened() {
+			this.$emit('onMobileSearchOpened');
+			console.log('mobile search opened');
+		}
+	},
 };
 </script>
 <style></style>

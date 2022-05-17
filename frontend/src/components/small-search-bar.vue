@@ -20,7 +20,6 @@ export default {
 	},
 	methods: {
 		openSearch() {
-			console.log('opening search');
 			this.$emit('openSearch');
 		},
 	},
