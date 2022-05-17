@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div> -->
     <div class="filter-container">
       <form class="flex align just">
         <div class="filter">
@@ -67,7 +67,7 @@
         end-placeholder="End date"
       />
     </div>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
