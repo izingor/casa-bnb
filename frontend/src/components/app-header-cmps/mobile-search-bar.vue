@@ -11,14 +11,12 @@
 <script>
 export default {
 	name: 'mobile-search-bar',
-
 	data() {
 		return {};
 	},
 	methods: {
 		onMobileSearchOpened() {
 			this.$emit('onMobileSearchOpened');
-			console.log('mobile search opened');
 		}
 	},
 };

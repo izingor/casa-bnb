@@ -2,7 +2,6 @@
 
 <!-- <div class = 'main-layout'> -->
 	<section class=" stay-filter flex align ">
-
 		<div class="price-btn-container">
 			<button class="" @click="togglePrice">
 				Price
@@ -13,7 +12,6 @@
 				/>
 			</button>
 		</div>
-
 		<stay-filter-price v-if="openPrice" :stays="stays" @setPrice="setPrice" />
 		<div v-for="amenity in lessAmenities" :key="amenity">
 			<button
@@ -28,7 +26,6 @@
 </template>
 
 <script>
-import { utilService } from '../services/util-service';
 import stayFilterPrice from './stay-filter-price.vue';
 export default {
 	name: 'stay-filter',

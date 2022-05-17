@@ -67,7 +67,6 @@ export default {
 	},
 	methods: {
 		async signUp() {
-            console.log('signing up');
 			if (
 				!this.newUser.username ||
 				!this.newUser.password ||
