@@ -4,7 +4,7 @@
     <label v-else> -->
     <stay-filter @setFilter="setFilter" :stays="stays" />
     <stay-list :stays="stays" />
-    <!-- </label> -->
+    
   </section>
 </template>
 
@@ -25,6 +25,8 @@ export default {
   },
   watch: {
     $route: "setFilter",
+    
+
   },
   computed: {
     stays() {

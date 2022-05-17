@@ -18,7 +18,7 @@ export default {
   getters: {
     filterBy({ filterBy }) {
       // if (!filterBy) return
-      var filterToSend = JSON.parse(JSON.stringify(filterBy))
+      var filterToSend = JSON.parse(JSON.stringify(filterBy));
       return filterToSend;
     },
     stays({ stays }) {
@@ -32,15 +32,15 @@ export default {
       return amenities;
     },
     lessAmenities({ lessAmenities }) {
-      var lessAmenitiesCopy = JSON.parse(JSON.stringify(lessAmenities))
+      var lessAmenitiesCopy = JSON.parse(JSON.stringify(lessAmenities));
       return lessAmenitiesCopy;
     },
     popularDest({ popularDest }) {
-      var popularDestCopy = JSON.parse(JSON.stringify(popularDest))
+      var popularDestCopy = JSON.parse(JSON.stringify(popularDest));
       return popularDestCopy;
     },
     popularStays({ popularStays }) {
-      var popularStaysCopy = JSON.parse(JSON.stringify(popularStays))
+      var popularStaysCopy = JSON.parse(JSON.stringify(popularStays));
       return popularStaysCopy;
     }
   },
@@ -67,15 +67,24 @@ export default {
   },
 
   actions: {
-    loadStays({ commit, state }) {
-      stayService.query(state.filterBy).then((stays) => {
+    async loadStays({ commit, state }) {
+      try {
+        const stays = await stayService.query(state.filterBy);
         commit({ type: 'setStays', stays });
-      });
+
+      } catch (err) {
+        console.log('Had and error loading your stays!');
+      }
+
     },
-    saveStay({ commit }, { stay }) {
-      stayService.save(stay).then((savedStay) => {
+    async saveStay({ commit }, { stay }) {
+      try {
+        const savedStay = await stayService.save(stay);
         commit({ type: 'saveStay', stay: savedStay });
-      });
+
+      } catch (err) {
+        console.log('Had an error while saving your stay');
+      }
     },
     removeStay({ commit }, { stayId }) {
       stayService.remove(stayId).then(() => {
@@ -83,9 +92,9 @@ export default {
       });
     },
     async getStayById({ state }, { stayId }) {
-      console.log('getting stay', stayId)
+      console.log('getting stay', stayId);
       const stay = await stayService.getById(stayId);
-      return stay
+      return stay;
 
     }
     // setFilter({ dispatch, commit, state }, { filterBy }) {

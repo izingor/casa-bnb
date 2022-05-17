@@ -42,7 +42,7 @@
 					</div>
 				</div>
 				<div class="buttons-container flex col space">
-					<button type="submit" class="btn btn-primary" @click="signUp">
+					<button type="submit" class="big-red-btn" @click="signUp">
 						Sign Up
 					</button>
 				</div>

@@ -34,7 +34,7 @@
         </div>
 
         <div class="buttons-container flex col space">
-          <button type="submit" class="login-btn">
+          <button type="submit" class="big-red-btn">
             <span>Login</span>
           </button>
         </div>
