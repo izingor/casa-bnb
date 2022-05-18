@@ -1,6 +1,6 @@
 .mobile-search-menu {
 	width: 100vw;
-	height: 26vh;
+	height: 150px;
 	position: fixed;
 	background-color: $white;
 	// transform: translate(-50%, -50%);
@@ -12,7 +12,7 @@
 
 	.mobile-search-container {
 		position: relative;
-		height: 48px;
+		height: 30%;
 		width: 85%;
 		background-color: $white;
 		margin-top: 64px;
@@ -44,8 +44,7 @@
 		border-radius: 50%;
 		position: absolute;
 		left: -5%;
-		bottom: 15%;
-		// transform: translate(-50%,-50%);
+		// bottom: 0%;
 		transition: 0.2s;
 
 		&:hover {
