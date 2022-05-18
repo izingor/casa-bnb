@@ -10,8 +10,8 @@
   >
     <div
       :class="{
-        'main-layout': isHome,
-        'details-layout': !isHome,
+        'main-layout': screenSize.isHome,
+        'details-layout': !screenSize.isHome,
       }"
     >
       <div class="header-content flex space">
@@ -48,7 +48,7 @@
             >
           </div>
           <!-- <router-link></router-link> -->
-          <user-badge></user-badge>
+          <user-badge :isMobileSize = "screenSize.isMobileSize"></user-badge>
         </nav>
       </div>
       <stay-search v-if="isOpen" :screenSize="screenSize"></stay-search>
@@ -73,18 +73,17 @@ export default {
       isSearchClicked: false,
       isDetailsPage: false,
       isMobileSearchOpen: false,
-      // screenSize: {
-      //   isMobileSize: false,
-      //   isMediumSize: false,
+      screenSize: {
+        isMobileSize: false,
+        isMediumSize: false,
         isHome: true,
-      //   path: null,
-      // },
+        path: null,
+      },
     };
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
     window.addEventListener("resize", this.checkScreenSize);
-
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -109,16 +108,16 @@ export default {
       this.isSearchClicked = true;
     },
     checkPagePath() {
-      // const stayPath = this.$route.path.substring(1, 5);
-      // this.screenSize.path = stayPath;
-      // this.$emit("screenResize", this.screenSize);
+      const stayPath = this.$route.path.substring(1, 5);
+      this.screenSize.path = stayPath;
+      this.$emit("screenResize", this.screenSize);
       if (this.$route.path !== "/") {
         this.isOpen = false;
         this.colorsChange = true;
-        this.isHome = false;
+        this.screenSize.isHome = false;
         this.isDetailsPage = true;
       } else {
-        this.isHome = true;
+        this.screenSize.isHome = true;
         this.isOpen = true;
         this.colorsChange = false;
         this.isSearchClicked = false;
@@ -132,17 +131,17 @@ export default {
     onMobileSearchClosed() {
       this.isMobileSearchOpen = !this.isMobileSearchOpen;
     },
-    // checkScreenSize({target}) {
-    //   const screenSize = target.innerWidth;
-    //   if (screenSize < 992) this.screenSize.isMediumSize = true;
-    //   else this.screenSize.isMediumSize = false;
-    //   if (screenSize < 780) {
-    //     this.screenSize.isMobileSize = true;
-    //   } else {
-    //     this.screenSize.isMobileSize = false;
-    //     this.$emit("screenResize", this.screenSize);
-    //   }
-    // },
+    checkScreenSize({ target }) {
+      const screenSize = target.innerWidth;
+      if (screenSize < 992) this.screenSize.isMediumSize = true;
+      else this.screenSize.isMediumSize = false;
+      if (screenSize < 780) {
+        this.screenSize.isMobileSize = true;
+      } else {
+        this.screenSize.isMobileSize = false;
+        this.$emit("screenResize", this.screenSize);
+      }
+    },
   },
 
   computed: {

@@ -80,9 +80,7 @@ export default {
 			this.isMobileMenu = false;
 		},
 		createNotification() {
-			console.log('creating notification', this.notification);
 			this.notification = '!';
-			console.log('creating notification', this.notification);
 		},
 		readNotification() {
 			this.notification = '';
@@ -90,10 +88,8 @@ export default {
 		setSocket() {
 			this.loggedUser = this.getUser;
 			if (!this.loggedUser) return;
-			console.log(this.getUser);
 			socketService.emit('topic', this.loggedUser._id);
 			socketService.on('add order', this.createNotification);
-			console.log('the socket has been set', this.loggedUser._id);
 		},
 	},
 	computed: {

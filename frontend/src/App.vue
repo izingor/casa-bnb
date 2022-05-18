@@ -17,7 +17,7 @@ export default {
   name: "app",
   data() {
     return {
-      screenSize: null,
+    //   screenSize: null,
       isHome: null,
     };
   },

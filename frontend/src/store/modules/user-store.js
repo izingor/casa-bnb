@@ -16,9 +16,7 @@ export default {
   },
   mutations: {
     setUser(state, { user }) {
-      console.log('setting user via store',user);
       state.loggedinUser = user;
-      // state.isGuest = !state.isGuest;
     }
 
   },

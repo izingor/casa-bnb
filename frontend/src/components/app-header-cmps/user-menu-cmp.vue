@@ -1,6 +1,7 @@
 <template>
   <!-- <div :class="{ invisible: isVisible }"> -->
-  <div class="menu-back-screen" @click.stop.prevent="closeMenu">
+  <div>
+    <div class="menu-back-screen" @click.stop.prevent="closeMenu"></div>
     <section class="user-menu-sec">
       <div class="guest-user-menu" v-if="!user">
         <div class="guest-user-actions">
@@ -68,58 +69,58 @@
 
 <script>
 export default {
-	name: 'user-menu',
-	emits: ['openLogin', 'openSignupModal', 'closeMenu'],
-	props: {
-		user: {
-			type: Object,
-		},
-		notification: {
-			type: String,
-		},
-	},
-	data() {
-		return {};
-	},
-	components: {},
-	created() {},
-	methods: {
-		openLogin() {
-			this.$emit('openLogin');
-		},
-		openSignup() {
-			console.log('open modal');
-			// this.isSignupModal = true;
-			this.$emit('openSignupModal');
-		},
-		async logout() {
-			console.log('logout');
-			await this.$store.dispatch({ type: 'logout' });
-			this.$emit('closeMenu');
-		},
-		closeMenu() {
-			this.$emit('closeMenu');
-		},
-		readNotification() {
-			this.$emit('readNotification');
-		},
-	},
-	computed: {
-		isVisible() {
-			if (this.isSignupModal || this.isLoginModal) {
-				return true;
-			}
-		},
-		notificationStatus() {
-			if (this.notification) return true;
-			else false;
-		},
-	},
-	mounted() {
-		// window.addEventListener('click', this.menuCheck);
-	},
-	unmounted() {
-		// window.removeEventListener('click', this.menuCheck);
-	},
+  name: "user-menu",
+  emits: ["openLogin", "openSignupModal", "closeMenu"],
+  props: {
+    user: {
+      type: Object,
+    },
+    notification: {
+      type: String,
+    },
+  },
+  data() {
+    return {};
+  },
+  components: {},
+  created() {},
+  methods: {
+    openLogin() {
+      this.$emit("openLogin");
+    },
+    openSignup() {
+      // this.closeMenu();
+      // this.isSignupModal = true;
+      this.$emit("openSignupModal");
+    },
+    async logout() {
+      console.log("logout");
+      await this.$store.dispatch({ type: "logout" });
+      this.$emit("closeMenu");
+    },
+    closeMenu() {
+      this.$emit("closeMenu");
+    },
+    readNotification() {
+      this.$emit("readNotification");
+    },
+  },
+  computed: {
+    isVisible() {
+      if (this.isSignupModal || this.isLoginModal) {
+        return true;
+      }
+    },
+    notificationStatus() {
+      if (this.notification) return true;
+      else false;
+    },
+  },
+  mounted() {
+    // window.addEventListener('click', this.menuCheck);
+  },
+  unmounted() {
+    // window.removeEventListener('click', this.menuCheck);
+  },
 };
 </script>
