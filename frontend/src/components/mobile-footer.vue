@@ -37,9 +37,7 @@ import { socketService } from '../services/socket.service.js';
 export default {
 	name: 'mobile-footer',
 	props: {
-		screenSize: {
-			type: Object,
-		},
+		
 	},
 	data() {
 		return {
@@ -64,7 +62,7 @@ export default {
 		// }
 	},
 	destroyed() {
-		socketService.off('add order');
+		// socketService.off('add order');
 	},
 	methods: {
 		explore() {
@@ -99,10 +97,7 @@ export default {
 		},
 	},
 	computed: {
-		screenStatus() {
-			if (this.screenSize?.path === 'stay') return false;
-			else return true;
-		},
+		
 		getUser() {
 			return this.$store.getters.user;
 		},

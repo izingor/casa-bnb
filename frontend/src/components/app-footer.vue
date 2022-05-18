@@ -20,7 +20,7 @@
 				
 			</div>
 		</footer>
-		<mobile-footer :screenSize="screenSize"></mobile-footer>
+		<mobile-footer></mobile-footer>
 		<!-- <pre>{{screenSize}}</pre> -->
 	</section>
 </template>
